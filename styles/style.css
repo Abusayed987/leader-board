@@ -68,3 +68,71 @@ hr{
  .blog-author{
     color: #9F9F9F;
  }
+
+/* ------------
+Lates Courses style 
+---------------*/
+
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course{
+    width: 252.42px;
+    height: 269.79px;
+}
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star.filled{
+    color: #FFC014;
+    font-size: 15px;
+}
+.fa-star.emty{
+    color: #AEAEAE;
+    font-size: 15px;
+}
+.course-duretion{
+    width: 85px;
+    color: rgb(252, 104, 104);
+    background-color: rgba(250, 144, 144, 0.548);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*-------------------- 
+     Media Query
+---------------------- */
+
+/* Mobile device */
+@media only screen and (max-width:688px){
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        justify-items: center;
+       grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* For iPad or Tablet Devices */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+     .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center
+    }
+   .blogs{
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+   }
+}
